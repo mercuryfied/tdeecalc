@@ -14,165 +14,136 @@
       color: #222;
       background: #fff;
     }
-
-    h1, h2 {
-      line-height: 1.3;
-    }
-
-    h1 {
-      margin-bottom: 0.25rem;
-    }
-
-    h2 {
-      margin-top: 2rem;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 0.3rem;
-    }
-
-    p {
-      margin: 1rem 0;
-    }
-
-    ul {
-      margin: 0.5rem 0 1rem 1.5rem;
-    }
-
-    li {
-      margin: 0.3rem 0;
-    }
-
-    .effective-date {
-      color: #666;
-      margin-top: 0;
-    }
+    h1, h2 { line-height: 1.3; }
+    h1 { margin-bottom: 0.25rem; }
+    h2 { margin-top: 2rem; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.3rem; }
+    p { margin: 1rem 0; }
+    ul { margin: 0.5rem 0 1rem 1.5rem; }
+    li { margin: 0.3rem 0; }
+    .effective-date { color: #666; margin-top: 0; }
   </style>
 </head>
 <body>
-
+<main>
   <h1>Privacy Policy</h1>
+  <p class="effective-date"><strong>Effective date:</strong> October 18, 2026</p>
 
-  <p class="effective-date"><strong>Effective date:</strong> August 7, 2026</p>
-
-  <p>
-    TDEECalc is designed to keep your information private. The app does not
-    require an account and does not sell personal information.
-  </p>
+  <p>TDEECalc is designed to keep your information private. The app does not require
+  an account and does not sell personal information.</p>
 
   <h2>Data stored by the app</h2>
-
-  <p>
-    Your profile, calorie calculations, active plan, weight logs, weekly
-    check-ins, widget snapshot, preferences, and local backups are stored
-    locally in the app's sandbox or shared app-group container. Files containing
-    body metrics, calorie targets, progress, or plan information are excluded
-    from system cloud backup. TDEECalc does not transmit them to the developer
-    or to an analytics service.
-  </p>
+  <p>Your profile, calorie calculations, active plan, weight logs, weekly check-ins,
+  widget snapshot, preferences, and local backups are stored locally in the app's
+  sandbox or shared app-group container. Files containing body metrics, calorie
+  targets, progress, or plan information are excluded from system cloud backup.
+  TDEECalc does not transmit them to the developer or to an analytics service.</p>
 
   <h2>Apple Health</h2>
-
-  <p>
-    If you choose to connect Apple Health, TDEECalc may request read access to:
-  </p>
-
+  <p>If you choose to connect Apple Health, TDEECalc may request read access to:</p>
   <ul>
     <li>Body mass</li>
     <li>Dietary energy</li>
   </ul>
+  <p>Weight and dietary energy may be used to calculate an observed TDEE estimate.
+  TDEECalc does not request permission to write any data to Apple Health.</p>
+  <p>Apple Health access is optional and is requested only after you select
+  “Connect Apple Health.” You control each permission in the Health app.</p>
+  <p>Raw Apple Health sample records are processed in app memory on your device and
+  are not copied into TDEECalc's history or rotating calculation backups. They are
+  not sent to the developer, used for advertising or marketing, or shared with
+  third parties. The widget does not receive raw sample records. Its local shared
+  snapshot can include the latest Health-derived weight, adaptive confidence, and
+  observed TDEE alongside your plan's calorie and macro targets. These derived
+  values are stored only on your device in the backup-excluded app-group container
+  so the widget can display your current progress.</p>
+  <p>An observed TDEE estimate or updated calorie target that you explicitly apply
+  is stored with your active plan on your device. TDEECalc excludes its plan,
+  progress, history, and local-backup files from system cloud backup.</p>
+  <p>Disconnecting Apple Health stops future refreshes, discards results from pending
+  requests, clears imported samples from app memory, and refreshes the widget using
+  your remaining manual entries and profile. A previously applied plan target or
+  locally generated insight may remain saved; disconnecting does not delete your
+  manual records or undo plan changes you confirmed. It does not change permissions managed by
+  Apple; you can review or revoke those permissions in the Health app or iOS
+  Settings.</p>
+  <p>When Apple Health is connected, iOS may wake TDEECalc after body-mass or dietary-
+  energy data changes so the app can refresh your locally calculated insight.
+  Background delivery does not add new data permissions, transmit data to the
+  developer, or cause TDEECalc to write to Apple Health. If you grant access to
+  only a limited history, TDEECalc limits its analysis to the dates iOS makes
+  available and explains that more history may be needed.</p>
 
-  <p>
-    Weight and dietary energy may be used to calculate an observed TDEE
-    estimate. TDEECalc does not request permission to write any data to Apple
-    Health.
-  </p>
+  <h2>On-device Energy Insights</h2>
+  <p>On supported devices, TDEECalc may use Apple's Foundation Models framework to
+  turn a small, structured set of locally calculated facts—such as formula TDEE,
+  observed TDEE, goal, confidence, and data-day counts—into a plain-language
+  summary. This processing uses the on-device system language model. TDEECalc
+  does not use Private Cloud Compute or a developer-operated AI server.</p>
+  <p>The generated summary is checked against TDEECalc's numeric results. If the
+  model is unavailable or its response cannot be validated, the app uses a
+  deterministic on-device explanation instead. Generated summaries are
+  educational, cannot change your active plan automatically, and are saved only
+  in the app's local, backup-excluded storage.</p>
 
-  <p>
-    Apple Health access is optional and is requested only after you select
-    <strong>“Connect Apple Health.”</strong> You control each permission in the
-    Health app.
-  </p>
+  <h2>Siri, Shortcuts, and widgets</h2>
+  <p>TDEECalc exposes optional App Intents for reading your current TDEE, BMR,
+  calorie target, and daily macro targets; logging weight; and opening relevant
+  screens, including the weekly check-in. Personal shortcut actions require
+  Apple's system authentication. Opening a check-in does not save one or change
+  your plan. Data returned to
+  Siri or Shortcuts is handled by Apple's system surfaces under your direction.
+  Weight logged through a Shortcut is validated and saved in the same local data
+  store as an in-app entry. Widget snapshots contain only the minimum values
+  needed to render the widget and remain in the app's local shared container.</p>
 
-  <p>
-    Raw Apple Health samples are processed on your device. They are not copied
-    into TDEECalc backups, included in the Home Screen widget, sent to the
-    developer, used for advertising or marketing, or shared with third parties.
-  </p>
-
-  <p>
-    An observed TDEE estimate or updated calorie target that you explicitly
-    apply is stored with your active plan on your device. TDEECalc excludes its
-    plan, progress, history, and local-backup files from system cloud backup.
-  </p>
-
-  <p>
-    Disconnecting Apple Health stops TDEECalc from reading Health data and
-    clears imported samples from app memory. It does not change permissions
-    managed by Apple; you can review or revoke those permissions in the Health
-    app or iOS Settings.
-  </p>
-
-  <h2>Adaptive beta diagnostics</h2>
-
-  <p>
-    You may voluntarily share a diagnostic report from Settings. The report
-    contains only the app version, connection status, and counts of days for
-    which relevant data is available. It does not contain weight, calorie, or
-    other raw health values. The report is shared only through the destination
-    you select in the iOS share sheet.
-  </p>
+  <h2>Privacy-safe diagnostics</h2>
+  <p>You may voluntarily share a diagnostic report from Settings. The report
+  contains only the app version, connection status, and counts of days for which
+  relevant data is available. It does not contain weight, calorie, or other raw
+  health values. The report is shared only through the destination you select in
+  the iOS share sheet.</p>
 
   <h2>Notifications</h2>
-
-  <p>
-    If you enable an optional weekly reminder, its schedule is stored on your
-    device and delivered by iOS. TDEECalc does not send reminder information to
-    a server.
-  </p>
+  <p>If you enable an optional weekly reminder, its schedule is stored on your
+  device and delivered by iOS. TDEECalc does not send reminder information to a
+  server.</p>
 
   <h2>Retention and deletion</h2>
-
-  <p>
-    Your information remains on your device until you delete entries or remove
-    the app. Deleting or clearing calculation history can leave a safety copy in
-    the app's rotating local-backup set, which retains no more than 20 backups
-    on the same device. These backups are excluded from system cloud backup.
-    Removing TDEECalc from the device removes its app data, subject to normal
-    iOS behavior.
-  </p>
-
-  <p>
-    Apple Health data is controlled separately by Apple. Because TDEECalc has
-    read-only access, it cannot add, change, or delete information in Apple
-    Health.
-  </p>
+  <p>Your information is stored locally, subject to the app's existing save-time
+  limits of 100 calculations, 1,000 progress entries, and 20 rotating calculation
+  backups. Updating the app does not intentionally reset or delete existing data.
+  Deleting an individual calculation can leave a safety copy in the
+  app's rotating local-backup set, which retains no more than 20 backups on the
+  same device. Using Clear All History also deletes those calculation-history
+  backups. Clear All History affects calculations and their rotating backups, not
+  your profile, active plan, progress, or Apple Health records. A storage error
+  leaves previously saved records in place and is reported in the app. If an
+  unreadable file can be recovered from a local backup, an additional on-device
+  recovery copy may be kept to protect its original bytes; it is not part of the
+  rotating backup set. Local safety copies of a previous plan or progress file
+  may also remain after an individual edit or deletion. These files are excluded
+  from system cloud backup. Local-only data can be lost if the device is lost,
+  damaged, or erased; there is no developer-operated recovery service. Removing TDEECalc from
+  the device removes its app data, subject to normal iOS behavior.</p>
+  <p>Apple Health data is controlled separately by Apple.</p>
 
   <h2>Analytics and tracking</h2>
-
-  <p>
-    TDEECalc does not use third-party analytics, advertising SDKs, cookies, or
-    cross-app tracking.
-  </p>
+  <p>TDEECalc does not use third-party analytics, advertising SDKs, cookies, or
+  cross-app tracking.</p>
 
   <h2>Educational purpose</h2>
-
-  <p>
-    TDEE, calorie, macro, BMI, ideal-weight, and progress estimates are
-    educational wellness information and are not medical advice, diagnosis, or
-    treatment. Consult a qualified healthcare professional before making medical
-    decisions or if you have health concerns.
-  </p>
+  <p>TDEE, calorie, macro, BMI, ideal-weight, progress, adaptive, and projection
+  estimates are educational wellness information and are not medical advice,
+  diagnosis, treatment, or guaranteed outcomes. Consult a qualified healthcare
+  professional before making medical decisions or if you have health concerns.</p>
 
   <h2>Children</h2>
-
-  <p>
-    Personalized calorie planning in TDEECalc is intended for adults aged 18
-    and older. TDEECalc does not knowingly collect personal information from
-    children.
-  </p>
+  <p>Personalized calorie planning in TDEECalc is intended for adults aged 18 and
+  older. TDEECalc does not knowingly collect personal information from children.</p>
 
   <h2>Changes and contact</h2>
-
-  <p>If you have any questions or concerns about this policy, feel free to contact us at our:</p>
-  <a href="https://mercuryfied.github.io/tdeecalc/support.html">Support Page:</a>
+  <p>This policy may be updated as the app changes. Questions can be sent to our </p>
+  <p><a href="https://mercuryfied.github.io/tdeecalc/support.html">Support Page</a></p>
+</main>
 </body>
 </html>
